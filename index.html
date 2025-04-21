@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Import Material Web + Styles -->
+    <script type="importmap">
+    {
+      "imports": {
+        "@material/web/": "https://esm.run/@material/web/"
+      }
+    }
+  </script>
+    <script type="module">
+        import '@material/web/all.js';
+        import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
+        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="../resources/design/material-imports.css" />
+    <link rel="stylesheet" href="../resources/design/material-primary.css" />
+    <link rel="stylesheet" href="../resources/design/material-secondary.css" />
+    <link rel="stylesheet" href="../resources/design/material-scheme.css" />
+</head>
+
+<body>
+
+    <!-- Drawer -->
+    <div id="drawer" class="drawer">
+        <div class="drawer-header">
+            <h2 class="md-typescale-headline-small">Tutorial</h2>
+            <span class="material-symbols-rounded" onclick="toggleDrawer()">close</span>
+        </div>
+        <nav id="navItems">
+            <md-list>
+                <md-list-item
+                    type="link"
+                    href="#step-1"
+                    target="_self">
+                  <div slot="headline">Introduction</div>
+                  <div slot="supporting-text">Learn about the app before proceeding</div>
+                </md-list-item>
+                <md-list-item
+                    type="link"
+                    href="#step-2"
+                    target="_self">
+                  <div slot="headline">Getting Started</div>
+                  <div slot="supporting-text">Setting up the app</div>
+                </md-list-item>
+              </md-list>
+        </nav>
+    </div>
+
+    <!-- Backdrop -->
+    <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden" onclick="toggleDrawer()"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <span class="material-symbols-rounded" onclick="toggleDrawer()">menu</span>
+            <a href="https://sflightx.com"><img src="https://i.imgur.com/unbXdTh.png" alt="sFlightX Logo" /></a>
+            <p class="md-typescale-headline-small">SFlightX Help</p>
+        </div>
+        <!--<label>Dark Mode<md-switch selected></md-switch></label>-->
+    </header>
+
+    <main>
+        <div style="height: 10vh;"></div>
+          
+    </main>
+
+    <!-- Script -->
+    <script src="../resources/function/drawer.js"></script>
+</body>
+
+</html>
