@@ -10,7 +10,7 @@
   <meta name="description"
     content="The help page for the SFlightX App. This page contains a tutorial on how to use the app and its features.">
   <meta name="keywords" content="SFlightX, App, Tutorial, Help, Spaceflight Simulator, Juno: New Origins">
-  <meta property="og:image" content="https://i.imgur.com/unbXdTh.png" />
+  <meta property="og:image" content="https://sflightx.com/resources/static/logo.png" />
   <meta property="og:url" content="sflightx.com" />
 
   <meta name="twitter:card" content="summary" />
@@ -18,11 +18,10 @@
   <meta name="twitter:title" content="sFlightX Help" />
   <meta name="twitter:description"
     content="The help page for the SFlightX App. This page contains a tutorial on how to use the app and its features." />
-  <meta name="twitter:image" content="https://i.imgur.com/unbXdTh.png" />
+  <meta name="twitter:image" content="https://sflightx.com/resources/static/logo.png" />
   <title>SFlightX Help</title>
-  <link rel="icon" type="image/png" href="https://i.imgur.com/unbXdTh.png">
+  <link rel="icon" type="image/png" href="https://sflightx.com/resources/static/logo.png">
 
-  <!-- Import Material Web + Styles -->
   <script type="importmap">
     {
       "imports": {
@@ -36,41 +35,36 @@
     document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
   </script>
 
-  <!-- Your Custom Styles -->
-
   <link rel="stylesheet" href="https://sflightx.com/resources/design/material-imports.css" />
   <link rel="stylesheet" href="../resources/design/material-primary.css" />
   <link rel="stylesheet" href="../resources/design/material-secondary.css" />
   <link rel="stylesheet" href="https://sflightx.com/resources/design/material-scheme.css" />
+  <link rel="stylesheet" href="main.css" />
   <link rel="stylesheet" href="tailwind.css" />
 </head>
 
 <body>
-
-  <!-- Drawer -->
   <div id="drawer" class="drawer">
     <div class="drawer-header">
-      <h2 class="md-typescale-headline-small">Tutorial</h2>
+      <h2 class="md-typescale-headline-small">Pages</h2>
       <span class="material-symbols-rounded" onclick="toggleDrawer()">close</span>
     </div>
     <nav id="navItems"></nav>
   </div>
-
-  <!-- Backdrop -->
   <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden" onclick="toggleDrawer()"></div>
 
-  <!-- Header -->
   <header>
     <div class="logo">
       <span class="material-symbols-rounded" onclick="toggleDrawer()" id="menu">menu</span>
-      <a href="https://sflightx.com"><img src="https://i.imgur.com/unbXdTh.png" alt="sFlightX Logo" /></a>
+      <a href="https://sflightx.com"></a>
+      <img id="logo" src="https://sflightx.com/resources/static/logo.png" alt="sFlightX Logo" />
+      </a>
     </div>
-    <label><span class="material-symbols-rounded">
-        dark_mode
-      </span><md-switch id="themeToggle"></md-switch></label>
+    <script>
+    </script>
+    <label><span class="material-symbols-rounded">dark_mode</span><md-switch id="themeToggle"></md-switch></label>
   </header>
 
-  <!-- MAIN -->
   <main>
     <div style="height: 10vh;"></div>
     <div class="container" id="step-1">
@@ -105,69 +99,27 @@
             href="https://sflightx.com/legal/terms">Terms and Conditions</a></span> and have read our <span><a
             href="https://sflightx.com/legal/privacy">Privacy Policy</a></span>.</p>
     </div>
-    <a href="https://sflightx.com/download" target="_self" class="large-button">
-      Next →
-      <p class="md-typescale-title-large">Upload Blueprint</p>
+    <p class="md-typescale-title-small">What would you like to do?</p>
+    <a href="https://help.sflightx.com/sflightx-app/upload-using-app" target="_self" class="large-button">
+      Tutorial →
+      <p class="md-typescale-title-large">Uploading to App</p>
+    </a>
+    <a href="https://sflightx.com/sflightx-app/download-using-app" target="_self" class="large-button">
+      Tutorial →
+      <p class="md-typescale-title-large">Downloading content</p>
     </a>
 
   </main>
 
-  <!-- Drawer -->
   <div id="locator" class="locator">
     <div class="locator-header"></div>
     <nav id="locItems"></nav>
   </div>
 
-  <!-- Script -->
   <script src="../resources/function/drawer.js"></script>
-  <script src="https://sflightx.com/resources/function/scroll.js"></script>
-  <script src="https://sflightx.com/resources/function/theme-mode.js"></script>
-  <script>
-    const navData = [
-      {
-        href: "#step-1",
-        headline: "Introduction",
-        supportingText: "Learn about the app before proceeding"
-      },
-      {
-        href: "#step-2",
-        headline: "Getting Started",
-        supportingText: "Setting up the app"
-      },
-      {
-        href: "#step-3",
-        headline: "Getting Started",
-        supportingText: "Setting up the app"
-      }
-    ];
-
-    const navContainer = document.getElementById("navItems");
-    const locContainer = document.getElementById("locItems");
-
-    const mdList = document.createElement("md-list");
-
-    navData.forEach(item => {
-      const mdListItem = document.createElement("md-list-item");
-      mdListItem.setAttribute("type", "link");
-      mdListItem.setAttribute("href", item.href);
-      mdListItem.setAttribute("target", "_self");
-
-      const headlineDiv = document.createElement("div");
-      headlineDiv.setAttribute("slot", "headline");
-      headlineDiv.textContent = item.headline;
-
-      const supportingDiv = document.createElement("div");
-      supportingDiv.setAttribute("slot", "supporting-text");
-      supportingDiv.textContent = item.supportingText;
-
-      mdListItem.appendChild(headlineDiv);
-      mdListItem.appendChild(supportingDiv);
-      mdList.appendChild(mdListItem);
-    });
-
-    navContainer.appendChild(mdList);
-    locContainer.appendChild(mdList);
-  </script>
+  <script src="../resources/function/scroll.js"></script>
+  <script src="../resources/function/theme-mode.js"></script>
+  <script src="../resources/data/main-content.js"></script>
 </body>
 
 </html>
