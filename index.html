@@ -2,81 +2,133 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Import Material Web + Styles -->
-    <script type="importmap">
+  <!-- Import Material Web + Styles -->
+  <script type="importmap">
     {
       "imports": {
         "@material/web/": "https://esm.run/@material/web/"
       }
     }
   </script>
-    <script type="module">
-        import '@material/web/all.js';
-        import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
-        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
-    </script>
+  <script type="module">
+    import '@material/web/all.js';
+    import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
+    document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+  </script>
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Your Custom Styles -->
-    <link rel="stylesheet" href="../resources/design/material-imports.css" />
-    <link rel="stylesheet" href="../resources/design/material-primary.css" />
-    <link rel="stylesheet" href="../resources/design/material-secondary.css" />
-    <link rel="stylesheet" href="../resources/design/material-scheme.css" />
+  <!-- Your Custom Styles -->
+
+  <link rel="stylesheet" href="../resources/design/material-imports.css" />
+  <link rel="stylesheet" href="../resources/design/material-primary.css" />
+  <link rel="stylesheet" href="../resources/design/material-secondary.css" />
+  <link rel="stylesheet" href="../resources/design/material-scheme.css" />
 </head>
 
 <body>
 
-    <!-- Drawer -->
-    <div id="drawer" class="drawer">
-        <div class="drawer-header">
-            <h2 class="md-typescale-headline-small">Tutorial</h2>
-            <span class="material-symbols-rounded" onclick="toggleDrawer()">close</span>
-        </div>
-        <nav id="navItems">
-            <md-list>
-                <md-list-item
-                    type="link"
-                    href="#step-1"
-                    target="_self">
-                  <div slot="headline">Introduction</div>
-                  <div slot="supporting-text">Learn about the app before proceeding</div>
-                </md-list-item>
-                <md-list-item
-                    type="link"
-                    href="#step-2"
-                    target="_self">
-                  <div slot="headline">Getting Started</div>
-                  <div slot="supporting-text">Setting up the app</div>
-                </md-list-item>
-              </md-list>
-        </nav>
+  <!-- Drawer -->
+  <div id="drawer" class="drawer">
+    <div class="drawer-header">
+      <h2 class="md-typescale-headline-small">Tutorial</h2>
+      <span class="material-symbols-rounded" onclick="toggleDrawer()">close</span>
     </div>
+    <nav id="navItems">
+      <md-list>
+        <md-list-item type="link" href="#step-1" target="_self">
+          <div slot="headline">Introduction</div>
+          <div slot="supporting-text">Learn about the app before proceeding</div>
+        </md-list-item>
+        <md-list-item type="link" href="#step-2" target="_self">
+          <div slot="headline">Getting Started</div>
+          <div slot="supporting-text">Setting up the app</div>
+        </md-list-item>
+      </md-list>
+    </nav>
+  </div>
 
-    <!-- Backdrop -->
-    <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden" onclick="toggleDrawer()"></div>
+  <!-- Backdrop -->
+  <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden" onclick="toggleDrawer()"></div>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <span class="material-symbols-rounded" onclick="toggleDrawer()">menu</span>
-            <a href="https://sflightx.com"><img src="https://i.imgur.com/unbXdTh.png" alt="sFlightX Logo" /></a>
-            <p class="md-typescale-headline-small">SFlightX Help</p>
-        </div>
-        <!--<label>Dark Mode<md-switch selected></md-switch></label>-->
-    </header>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <span class="material-symbols-rounded" onclick="toggleDrawer()">menu</span>
+      <a href="https://sflightx.com"><img src="https://i.imgur.com/unbXdTh.png" alt="sFlightX Logo" /></a>
+    </div>
+    <label><span class="material-symbols-rounded">
+      dark_mode
+      </span><md-switch id="themeToggle"></md-switch></label>
+  </header>
 
-    <main>
-        <div style="height: 10vh;"></div>
-          
-    </main>
+  <!-- MAIN -->
+  <main>
+    <div style="height: 10vh;"></div>
+    <div class="container" id="step-1">
+      <h1 class="md-typescale-display-medium">Introduction</h1>
+      <p class="md-typescale-title-small">In this simple tutorial, you will learn how to use the SFlightX App for your
+        daily needs in our supported space games!</p>
+        <md-chip-set>
+          <md-assist-chip label="Spaceflight Simulator"></md-assist-chip>
+          <md-assist-chip label="Juno: New Origins"></md-assist-chip>
+        </md-chip-set>
+    </div>
+    <div class="secondary-container">
+      <iframe style="width: 100%; height: 30vh; border-radius: 16px;" src="https://www.youtube.com/embed/7QPG5cTcvGY?si=7FD5tZwM6D0651ur"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="container">
+      <h1 class="md-typescale-display-medium" id="step-2">Getting Started</h1>
+      <p class="md-typescale-title-small">Before we start, here are the prerequisites of this tutorial.</p>
+    </div>
+    <div class="secondary-container">
+      <div style="display: flex;">
+        <md-filled-tonal-button style="margin-right: 16px;" href="https://github.com/sflightx/sflightx-app/releases">Download App
+          <span slot="icon" class="material-symbols-rounded" style="display: flex; align-items: center; height: 100%; width: 24px;">download</span>
+        </md-filled-tonal-button>
+        <p class="md-typescale-title-small">GitHub Link</p>
+      </div>
+      <p class="md-typescale-body-large">By using the app, you agree to our <span><a href="https://sflightx.com/legal/terms">Terms and Conditions</a></span> and have read our <span><a href="https://sflightx.com/legal/privacy">Privacy Policy</a></span>.</p>
+      <p class="md-typescale-body-large">Finish Downloading? You can proceed now!</p>
+    </div>
+    <a href="https://sflightx.com/download" target="_self" class="large-button">
+      Next →
+      <p class="md-typescale-title-large">Download the app from our website</p>
+    </a>
 
-    <!-- Script -->
-    <script src="../resources/function/drawer.js"></script>
+  </main>
+
+  <!-- Drawer -->
+  <div id="locator" class="locator">
+    <div class="locator-header"></div>
+    <nav id="navItems">
+      <md-list>
+        <md-list-item>
+          <div slot="headline" class="md-typescale-headline-small">On this page</div>
+        </md-list-item>
+        <md-list-item type="link" href="#step-1" target="_self">
+          <div slot="headline">Introduction</div>
+          <div slot="supporting-text">Learn about the app before proceeding</div>
+        </md-list-item>
+        <md-list-item type="link" href="#step-2" target="_self">
+          <div slot="headline">Getting Started</div>
+          <div slot="supporting-text">Setting up the app</div>
+        </md-list-item>
+      </md-list>
+    </nav>
+  </div>
+
+  <!-- Script -->
+  <script src="../resources/function/drawer.js"></script>
+  <script src="../resources/function/scroll.js"></script>
+  <script src="../resources/function/theme-mode.js"></script>
 </body>
 
 </html>
