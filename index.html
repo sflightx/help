@@ -2,8 +2,25 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="version" content="1.0.0">
+  <meta name="author" content="SFlightX">
+  <meta name="version_date" content="04-22-2025">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <meta name="description"
+    content="The help page for the SFlightX App. This page contains a tutorial on how to use the app and its features.">
+  <meta name="keywords" content="SFlightX, App, Tutorial, Help, Spaceflight Simulator, Juno: New Origins">
+  <meta property="og:image" content="https://i.imgur.com/unbXdTh.png" />
+  <meta property="og:url" content="sflightx.com" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@SFlightXJNO" />
+  <meta name="twitter:title" content="sFlightX Help" />
+  <meta name="twitter:description"
+    content="The help page for the SFlightX App. This page contains a tutorial on how to use the app and its features." />
+  <meta name="twitter:image" content="https://i.imgur.com/unbXdTh.png" />
+  <title>SFlightX Help</title>
+  <link rel="icon" type="image/png" href="https://i.imgur.com/unbXdTh.png">
 
   <!-- Import Material Web + Styles -->
   <script type="importmap">
@@ -19,15 +36,13 @@
     document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
   </script>
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
   <!-- Your Custom Styles -->
 
   <link rel="stylesheet" href="https://sflightx.com/resources/design/material-imports.css" />
-  <link rel="stylesheet" href="https://sflightx.com/resources/design/material-primary.css" />
-  <link rel="stylesheet" href="https://sflightx.com/resources/design/material-secondary.css" />
+  <link rel="stylesheet" href="../resources/design/material-primary.css" />
+  <link rel="stylesheet" href="../resources/design/material-secondary.css" />
   <link rel="stylesheet" href="https://sflightx.com/resources/design/material-scheme.css" />
+  <link rel="stylesheet" href="tailwind.css" />
 </head>
 
 <body>
@@ -38,18 +53,7 @@
       <h2 class="md-typescale-headline-small">Tutorial</h2>
       <span class="material-symbols-rounded" onclick="toggleDrawer()">close</span>
     </div>
-    <nav id="navItems">
-      <md-list>
-        <md-list-item type="link" href="#step-1" target="_self">
-          <div slot="headline">Introduction</div>
-          <div slot="supporting-text">Learn about the app before proceeding</div>
-        </md-list-item>
-        <md-list-item type="link" href="#step-2" target="_self">
-          <div slot="headline">Getting Started</div>
-          <div slot="supporting-text">Setting up the app</div>
-        </md-list-item>
-      </md-list>
-    </nav>
+    <nav id="navItems"></nav>
   </div>
 
   <!-- Backdrop -->
@@ -62,7 +66,7 @@
       <a href="https://sflightx.com"><img src="https://i.imgur.com/unbXdTh.png" alt="sFlightX Logo" /></a>
     </div>
     <label><span class="material-symbols-rounded">
-      dark_mode
+        dark_mode
       </span><md-switch id="themeToggle"></md-switch></label>
   </header>
 
@@ -73,14 +77,14 @@
       <h1 class="md-typescale-display-medium">Introduction</h1>
       <p class="md-typescale-title-small">In this simple tutorial, you will learn how to use the SFlightX App for your
         daily needs in our supported space games!</p>
-        <md-chip-set>
-          <md-assist-chip label="Spaceflight Simulator"></md-assist-chip>
-          <md-assist-chip label="Juno: New Origins"></md-assist-chip>
-        </md-chip-set>
+      <md-chip-set>
+        <md-assist-chip label="Spaceflight Simulator"></md-assist-chip>
+        <md-assist-chip label="Juno: New Origins"></md-assist-chip>
+      </md-chip-set>
     </div>
     <div class="secondary-container" style="padding: 0;">
-      <iframe style="width: 100%; height: 70vh; border-radius: 16px;" src="https://www.youtube.com/embed/7QPG5cTcvGY?si=7FD5tZwM6D0651ur"
-        title="YouTube video player" frameborder="0"
+      <iframe style="width: 100%; height: 70vh; border-radius: 16px;"
+        src="https://www.youtube.com/embed/7QPG5cTcvGY?si=7FD5tZwM6D0651ur" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
@@ -90,12 +94,16 @@
     </div>
     <div class="secondary-container">
       <div style="display: flex;">
-        <md-filled-tonal-button style="margin-right: 16px;" href="https://github.com/sflightx/sflightx-app/releases">Download App
-          <span slot="icon" class="material-symbols-rounded" style="display: flex; align-items: center; height: 100%; width: 24px;">download</span>
+        <md-filled-tonal-button style="margin-right: 16px;"
+          href="https://github.com/sflightx/sflightx-app/releases">Download App
+          <span slot="icon" class="material-symbols-rounded"
+            style="display: flex; align-items: center; height: 100%; width: 24px;">download</span>
         </md-filled-tonal-button>
         <p class="md-typescale-title-small">GitHub Link</p>
       </div>
-      <p class="md-typescale-body-large">By using the app, you agree to our <span><a href="https://sflightx.com/legal/terms">Terms and Conditions</a></span> and have read our <span><a href="https://sflightx.com/legal/privacy">Privacy Policy</a></span>.</p>
+      <p class="md-typescale-body-large">By using the app, you agree to our <span><a
+            href="https://sflightx.com/legal/terms">Terms and Conditions</a></span> and have read our <span><a
+            href="https://sflightx.com/legal/privacy">Privacy Policy</a></span>.</p>
     </div>
     <a href="https://sflightx.com/download" target="_self" class="large-button">
       Next →
@@ -107,27 +115,59 @@
   <!-- Drawer -->
   <div id="locator" class="locator">
     <div class="locator-header"></div>
-    <nav id="navItems">
-      <md-list>
-        <md-list-item>
-          <div slot="headline" class="md-typescale-headline-small">On this page</div>
-        </md-list-item>
-        <md-list-item type="link" href="#step-1" target="_self">
-          <div slot="headline">Introduction</div>
-          <div slot="supporting-text">Learn about the app before proceeding</div>
-        </md-list-item>
-        <md-list-item type="link" href="#step-2" target="_self">
-          <div slot="headline">Getting Started</div>
-          <div slot="supporting-text">Setting up the app</div>
-        </md-list-item>
-      </md-list>
-    </nav>
+    <nav id="locItems"></nav>
   </div>
 
   <!-- Script -->
-  <script src="https://sflightx.com/resources/function/drawer.js"></script>
+  <script src="../resources/function/drawer.js"></script>
   <script src="https://sflightx.com/resources/function/scroll.js"></script>
   <script src="https://sflightx.com/resources/function/theme-mode.js"></script>
+  <script>
+    const navData = [
+      {
+        href: "#step-1",
+        headline: "Introduction",
+        supportingText: "Learn about the app before proceeding"
+      },
+      {
+        href: "#step-2",
+        headline: "Getting Started",
+        supportingText: "Setting up the app"
+      },
+      {
+        href: "#step-3",
+        headline: "Getting Started",
+        supportingText: "Setting up the app"
+      }
+    ];
+
+    const navContainer = document.getElementById("navItems");
+    const locContainer = document.getElementById("locItems");
+
+    const mdList = document.createElement("md-list");
+
+    navData.forEach(item => {
+      const mdListItem = document.createElement("md-list-item");
+      mdListItem.setAttribute("type", "link");
+      mdListItem.setAttribute("href", item.href);
+      mdListItem.setAttribute("target", "_self");
+
+      const headlineDiv = document.createElement("div");
+      headlineDiv.setAttribute("slot", "headline");
+      headlineDiv.textContent = item.headline;
+
+      const supportingDiv = document.createElement("div");
+      supportingDiv.setAttribute("slot", "supporting-text");
+      supportingDiv.textContent = item.supportingText;
+
+      mdListItem.appendChild(headlineDiv);
+      mdListItem.appendChild(supportingDiv);
+      mdList.appendChild(mdListItem);
+    });
+
+    navContainer.appendChild(mdList);
+    locContainer.appendChild(mdList);
+  </script>
 </body>
 
 </html>
