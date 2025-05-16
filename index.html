@@ -7,21 +7,19 @@
   <meta name="author" content="SFlightX">
   <meta name="version_date" content="04-22-2025">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-  <meta name="description"
-    content="The help page for the SFlightX App. This page contains a tutorial on how to use the app and its features.">
+  <meta name="description" content="The help page for the SFlightX App. This page contains a tutorial on how to use the app and its features.">
   <meta name="keywords" content="SFlightX, App, Tutorial, Help, Spaceflight Simulator, Juno: New Origins">
   <meta property="og:image" content="https://sflightx.com/resources/static/logo.png" />
   <meta property="og:url" content="sflightx.com" />
-
+  
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@SFlightXJNO" />
   <meta name="twitter:title" content="sFlightX Help" />
-  <meta name="twitter:description"
-    content="The help page for the SFlightX App. This page contains a tutorial on how to use the app and its features." />
+  <meta name="twitter:description" content="The help page for the SFlightX App. This page contains a tutorial on how to use the app and its features." />
   <meta name="twitter:image" content="https://sflightx.com/resources/static/logo.png" />
   <title>SFlightX Help</title>
   <link rel="icon" type="image/png" href="https://sflightx.com/resources/static/logo.png">
-
+  
   <script type="importmap">
     {
       "imports": {
@@ -34,7 +32,7 @@
     import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
     document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
   </script>
-
+  
   <link rel="stylesheet" href="https://sflightx.com/resources/design/material-imports.css" />
   <link rel="stylesheet" href="https://sflightx.com/resources/design/material-primary.css" />
   <link rel="stylesheet" href="https://sflightx.com/resources/design/material-secondary.css" />
@@ -52,7 +50,7 @@
     <nav id="navItems"></nav>
   </div>
   <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden" onclick="toggleDrawer()"></div>
-
+  
   <header>
     <div class="logo">
       <span class="material-symbols-rounded" onclick="toggleDrawer()" id="menu">menu</span>
@@ -62,11 +60,10 @@
     </div>
     <label><span class="material-symbols-rounded">dark_mode</span><md-switch id="themeToggle"></md-switch></label>
   </header>
-
-  <main style="margin: 24px;">
-    <div style="height: 10vh;"></div>
-    <div class="container" id="step-1">
-      <h1 class="md-typescale-display-medium">Introduction</h1>
+  
+  <main class="secondary-container">
+    <div class="secondary-container" id="step-1">
+      <h1 class="md-typescale-display-medium" style="padding: 0;">Introduction</h1>
       <p class="md-typescale-title-small">In this simple tutorial, you will learn how to use the SFlightX App for your
         daily needs in our supported space games!</p>
       <md-chip-set>
@@ -75,28 +72,19 @@
       </md-chip-set>
     </div>
     <div class="secondary-container" style="padding: 0;">
-      <iframe style="width: 100%; height: 70vh; border-radius: 24px;"
-        src="https://www.youtube.com/embed/7QPG5cTcvGY?si=7FD5tZwM6D0651ur" title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe style="width: 100%; height: 70vh; border-radius: 24px;" src="https://www.youtube.com/embed/7QPG5cTcvGY?si=7FD5tZwM6D0651ur" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    <div class="container">
-      <h1 class="md-typescale-display-medium" id="step-2">Getting Started</h1>
+    <div class="container" id="step-2">
+      <h1 class="md-typescale-display-medium" style="padding: 0;">Getting Started</h1>
       <p class="md-typescale-title-small">Before we start, here are the prerequisites of this tutorial.</p>
     </div>
-    <div class="secondary-container">
-      <div style="display: flex;">
-        <md-filled-tonal-button style="margin-right: 16px;"
-          href="https://github.com/sflightx/sflightx-app/releases">Download App
-          <span slot="icon" class="material-symbols-rounded"
-            style="display: flex; align-items: center; height: 100%; width: 24px;">download</span>
-        </md-filled-tonal-button>
-        <p class="md-typescale-title-small">GitHub Link</p>
-      </div>
-      <p class="md-typescale-body-large">By using the app, you agree to our <span><a
-            href="https://sflightx.com/legal/terms">Terms and Conditions</a></span> and have read our <span><a
-            href="https://sflightx.com/legal/privacy">Privacy Policy</a></span>.</p>
+    <div style="display: flex;">
+      <md-filled-tonal-button style="margin-right: 16px;" href="https://github.com/sflightx/sflightx-app/releases">Download App
+        <span slot="icon" class="material-symbols-rounded" style="display: flex; align-items: center; height: 100%; width: 24px;">download</span>
+      </md-filled-tonal-button>
+      <p class="md-typescale-title-small">GitHub Link</p>
     </div>
+    <p class="md-typescale-body-large">By using the app, you agree to our <span><a href="https://sflightx.com/legal/terms">Terms and Conditions</a></span> and have read our <span><a href="https://sflightx.com/legal/privacy">Privacy Policy</a></span>.</p>
     <p class="md-typescale-title-small">What would you like to do?</p>
     <a href="https://help.sflightx.com/sflightx-app/upload-using-app" target="_self" class="large-button">
       Tutorial →
@@ -108,46 +96,37 @@
     </a>
     <footer>
       <div id="horizontal-footer">
-
+        
         <div id="footer-logo">
-          <a href="https://sflightx.com"><img id="footer-logo" src="https://sflightx.com/resources/static/logo.png"
-              alt="sFlightX Logo" /></a>
+          <a href="https://sflightx.com"><img id="footer-logo" src="https://sflightx.com/resources/static/logo.png" alt="sFlightX Logo" /></a>
           <p class="md-typescale-body-medium">SFlightX is not affiliated with Spaceflight Simulator or Juno: New
             Origins. This website is not affiliated with Space Exploration Technologies (SpaceX).</p>
           <p class="md-typescale-body-medium">© 2021-2025 SFlightX. All rights reserved.</p>
         </div>
         <div id="legal-link">
           <div id="icon-link">
-            <a href="https://x.com/SFlightXJNO"><img
-                src="https://img.icons8.com/?size=100&id=Q33YQBzI2lZs&format=png&color=FFFFFF"
-                class="footer-link-img"></a>
-            <a href="https://youtube.com/@sflightx"><img
-                src="https://img.icons8.com/?size=100&id=85162&format=png&color=FFFFFF" class="footer-link-img"></a>
-            <a href="https://facebook.com/sflightx"><img
-                src="https://img.icons8.com/?size=100&id=85126&format=png&color=FFFFFF" class="footer-link-img"></a>
-            <a href="https://bsky.app/profile/sflightx.com"><img
-                src="https://img.icons8.com/?size=100&id=MGqlXOe8ksH0&format=png&color=FFFFFF"
-                class="footer-link-img"></a>
-            <a href="https://simplerockets.com/u/sflightx"><img
-                src="https://img.icons8.com/?size=100&id=COgXDnufRVRP&format=png&color=FFFFFF"
-                class="footer-link-img"></a>
+            <a href="https://x.com/SFlightXJNO"><img src="https://img.icons8.com/?size=100&id=Q33YQBzI2lZs&format=png&color=FFFFFF" class="footer-link-img"></a>
+            <a href="https://youtube.com/@sflightx"><img src="https://img.icons8.com/?size=100&id=85162&format=png&color=FFFFFF" class="footer-link-img"></a>
+            <a href="https://facebook.com/sflightx"><img src="https://img.icons8.com/?size=100&id=85126&format=png&color=FFFFFF" class="footer-link-img"></a>
+            <a href="https://bsky.app/profile/sflightx.com"><img src="https://img.icons8.com/?size=100&id=MGqlXOe8ksH0&format=png&color=FFFFFF" class="footer-link-img"></a>
+            <a href="https://simplerockets.com/u/sflightx"><img src="https://img.icons8.com/?size=100&id=COgXDnufRVRP&format=png&color=FFFFFF" class="footer-link-img"></a>
           </div>
           <div class="text-link">
             <a href="https://sflightx.com/legal/terms" target="_self">Terms of Service</a>
             <a href="https://sflightx.com/legal/privacy" target="_self">Privacy Policy</a>
           </div>
         </div>
-
+        
       </div>
     </footer>
-
+    
   </main>
-
+  
   <div id="locator" class="locator">
     <div id="locator-header"></div>
     <nav id="locItems"></nav>
   </div>
-
+  
   <script src="https://sflightx.com/resources/function/drawer.js"></script>
   <script src="https://sflightx.com/resources/function/scroll.js"></script>
   <script src="https://sflightx.com/resources/function/theme-mode.js"></script>
