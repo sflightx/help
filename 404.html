@@ -88,7 +88,8 @@
 
   <script>
     const fallback = document.getElementById("fallback");
-    const locItems = document.getElementById("locItems");
+    const locator = document.getElementById("locator");
+    const site_content = document.getElementById("content");
     (function () {
       // Remove leading/trailing slashes and .html extension
       let path = window.location.pathname.replace(/^\/+|\/+$/g, '');
@@ -107,7 +108,8 @@
       script.onerror = () => {
         // Fallback if script fails to load
         fallback.style.display = "block";
-        locItems.style.display = "none";
+        locator.style.display = "none";
+        site_content.style.display = "none";
         return;
         console.error('Could not load help content:', resourceURL);
       };
@@ -177,7 +179,8 @@
 
       if (!data) {
         fallback.style.display = "block";
-        locItems.style.display = "none";
+        locator.style.display = "none";
+        site_content.style.display = "none";
         return;
       }
 
