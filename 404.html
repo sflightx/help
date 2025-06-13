@@ -87,6 +87,8 @@
   <script src="https://sflightx.com/resources/v4/dependency.js"></script>
 
   <script>
+    const fallback = document.getElementById("fallback");
+    const locItems = document.getElementById("locItems");
     (function () {
       // Remove leading/trailing slashes and .html extension
       let path = window.location.pathname.replace(/^\/+|\/+$/g, '');
@@ -104,6 +106,9 @@
       script.type = 'module';
       script.onerror = () => {
         // Fallback if script fails to load
+        fallback.style.display = "block";
+        locItems.style.display = "none";
+        return;
         console.error('Could not load help content:', resourceURL);
       };
       console.log('Content loaded:', resourceURL);
@@ -171,8 +176,8 @@
       }
 
       if (!data) {
-        const fallback = document.getElementById("fallback");
         fallback.style.display = "block";
+        locItems.style.display = "none";
         return;
       }
 
